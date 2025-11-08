@@ -166,10 +166,14 @@ header {
     cursor: pointer;
     margin: 0;
     padding: 0;
-    border-right: none; /* Убираем правую границу чтобы не было двойных */
+    border-right: none; /*  убр правую границу */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
-/* Возвращаем правую границу только последней кнопке */
+/* Возвр правую границу после кнопке */
 .main_scroll_b3 {
     border-right: 0.2vw solid #242424;
 }
