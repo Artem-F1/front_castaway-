@@ -1,0 +1,191 @@
+/* Сбрасываем стандартные отступы браузера для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box - очень важное свойство!
+       Оно означает, что padding и border включаются в общую ширину/высоту элемента
+       Без этого при добавлении padding ширина элемента увеличивается */
+    box-sizing: border-box;
+}
+
+/* Стили для body - основной контейнер страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* Основной контейнер нашего контента */
+.fon {
+    min-height: 100vh; /* vh - viewport height, 100vh = 100% высоты экрана */
+    padding: 2rem; /* rem - относительная единица, 1rem = размер шрифта html */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Шапка сайта */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Контейнер для заголовка и линий */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Это распределит элементы по краям! */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* Заголовок Castaway */
+.fon_cast_h2 {
+    font-size: clamp(2rem, 8vw, 7rem); 
+    /* clamp(min, preferred, max) - адаптивная функция:
+       - минимум 2rem
+       - предпочтительно 8vw (8% ширины экрана)
+       - максимум 7rem */
+    color: white;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* Контейнер для трех линий */
+.lines-container {
+    display: flex;
+    gap: 1rem; /* Отступ между линиями */
+}
+
+/* Стили для всех трех линий */
+.fon_line_1, .fon_line_2, .fon_line_3 {
+    background-color: white;
+    width: clamp(3rem, 10vw, 12rem); /* Адаптивная ширина */
+    height: clamp(0.5rem, 2vw, 2rem); /* Адаптивная высота */
+    flex-direction: row;
+    }
+
+/* Контейнер для изображения */
+.fon_img {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Само изображение */
+.fon_img img {
+    width: 100%;
+    height: auto; /* Сохраняет пропорции изображения */
+    display: block;
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Для планшетов и маленьких экранов (ширина до 768px) */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column; /* Меняем направление на колонку */
+        gap: 1rem; /* Добавляем отступ между элементами */
+    }
+    
+    .lines-container {
+        justify-content: center; /* Центрируем линии */
+    }
+    
+    .fon {
+        padding: 1rem; /* Уменьшаем отступы */
+    }
+}
+
+/* Для мобильных телефонов (ширина до 480px) */
+@media (max-width: 480px) {
+    .lines-container {
+        flex-direction: column; /* Линии в колонку */
+        align-items: center;
+    }
+}
+
+.fon_img img {
+    border-radius: 5vw;
+}
+   
+.main_prod_text {
+    font-size: 12vw;
+    color: white;
+    font-weight: 400;
+    margin-top: 2rem;
+    
+}
+
+.main_prod_listen {
+    font-size: 4vw;
+    color: white;
+    font-weight: 300;
+    margin-top: 2rem;
+}   
+    
+.main_prod_img1 , .main_prod_img2 , .main_prod_img3 ,
+.main_prod_img4 , .main_prod_img5 {
+    height: 10vw;
+    width: 10vw;
+    border-radius: 3vw;
+    margin-top: 1.5rem;
+
+}
+
+.main_eps_text {
+    font-size: 10vw;
+    color: white;
+    font-weight: 300;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+ 
+      /*  ебаные кнопки */ 
+      
+.main_scroll {
+    display: flex;
+    gap: 0; /* Нулевое расстояние */
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.main_scroll_b1, .main_scroll_b2, .main_scroll_b3 {
+    display: block;
+    width: 15vw;
+    height: 13vw;
+    background-color: #696a6b;
+    color: black;
+    border: 0.2vw solid #242424;
+    text-align: center;
+    line-height: 8vw;
+    font-size: 1.2vw;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border-right: none; /* Убираем правую границу чтобы не было двойных */
+}
+
+/* Возвращаем правую границу только последней кнопке */
+.main_scroll_b3 {
+    border-right: 0.2vw solid #242424;
+}
+
+.main_scroll_b1 {
+    background-color: #3e9acf;
+    color: white;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
