@@ -1,4 +1,4 @@
-/* Сбрасываем стандартные отступы браузера для всех элементов */
+
 * {
     margin: 0;
     padding: 0;
@@ -115,6 +115,10 @@ header {
     color: white;
     font-weight: 400;
     margin-top: 2rem;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     
 }
 
@@ -123,6 +127,12 @@ header {
     color: white;
     font-weight: 300;
     margin-top: 2rem;
+    user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
 }   
     
 .main_prod_img1 , .main_prod_img2 , .main_prod_img3 ,
@@ -140,6 +150,10 @@ header {
     font-weight: 300;
     margin-top: 2rem;
     padding-bottom: 2rem;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
  
