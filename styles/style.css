@@ -42,10 +42,10 @@ header {
 /* Заголовок Castaway */
 .fon_cast_h2 {
     font-size: clamp(2rem, 8vw, 7rem); 
-    /* clamp(min, preferred, max) - адаптивная функция:
-       - минимум 2rem
-       - предпочтительно 8vw (8% ширины экрана)
-       - максимум 7rem */
+     user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     color: white;
     flex-direction: row;
     justify-content: flex-start;
